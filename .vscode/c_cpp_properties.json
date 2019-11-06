@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/home/marcelocf/Documents/PlatformIO/Projects/190802-154034-megaADK/include",
+                "/home/marcelocf/Documents/PlatformIO/Projects/190802-154034-megaADK/src",
+                "/home/marcelocf/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
+                "/home/marcelocf/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
+                "/home/marcelocf/.platformio/packages/framework-arduinoavr/cores/arduino",
+                "/home/marcelocf/.platformio/packages/framework-arduinoavr/variants/mega",
+                "/home/marcelocf/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
+                "/home/marcelocf/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
+                "/home/marcelocf/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
+                "/home/marcelocf/.platformio/packages/tool-unity",
+                "/home/marcelocf/sketchbook/libraries/CAN_BUS_Shield_master"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

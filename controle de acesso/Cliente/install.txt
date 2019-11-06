@@ -1,0 +1,30 @@
+﻿requisitos: (estou trabalhando neles para elimina-los)
+
+    1- python (pode ser baixado em https://www.python.org/downloads/ e instalado de modo custom selecioando a opção de variavel de ambiante (ambiente path));
+
+    2 ter o firebase-admin (depois de ter o python rode no cmd em modo de administrador "pip install firebase-admin")
+
+
+
+
+/---------------------ATENÇÃO-------------------------/
+
+ATENÇÃO: NÃO ,repito NÂo repasse o credentials.json para ninguem que não seja de confiança, são as credenciais do banco de dados, serio esse arquivo é confidencial
+
+ATENÇÃO: NÃO tente modificar o codigo por conta propria
+
+ATENÇÃO: NÃO tente escrever na database, pode coromper os dados e vai aparecer no log
+
+/---------------------ATENÇÃO-------------------------/
+
+
+
+
+para rodar o programa é so clicar 2 vezes em cima dele (eu acho que funciona, se não funcionar segure shift e clique com o botão direito na pasta do programa e clique em abrir um terminal aqui, então execute o comando "python main.py")
+
+divirta-se e aprecie o arquivo test.csv gerado
+
+
+
+
+ps:não estou deixando o Credentials.json aqui no drive por motivos obvios (vide ATENÇÃo)
