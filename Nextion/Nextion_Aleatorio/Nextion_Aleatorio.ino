@@ -28,12 +28,13 @@
 #define button 7
 #define pot A0
 
-NexText t0 = NexText(0, 2, "t0");
-NexText t1 = NexText(0, 3, "t1");
-NexText t2 = NexText(0, 4, "t2");
-NexText t3 = NexText(0, 5, "t3");
-NexText t4 = NexText(0, 6, "t4");
-NexText t8 = NexText(0, 10, "t8");
+NexText t0 = NexText(0, 11, "t0");
+NexText t1 = NexText(0, 2, "t1");
+NexText t2 = NexText(0, 10, "t2");
+NexText t3 = NexText(0, 3, "t3");
+NexText t4 = NexText(0, 4, "t4");
+NexText t8 = NexText(0, 8, "t8");
+NexText t9 = NexText(0, 12, "t9");
 NexPage page0 = NexPage(0, 0, "page0");
 NexPage page1 = NexPage(1, 0, "page1");
 NexPage page2 = NexPage(2, 0, "page2");
@@ -43,7 +44,8 @@ char  txt0[10],
       txt2[10],
       txt3[10],
       txt4[10],
-      txt8[10];
+      txt8[10],
+      txt9[10];
 
 int marcha=0,
     pot_value = 0,
@@ -72,13 +74,6 @@ void loop() {
   }
   
   botaoAnt=botaoAtu;
-
-  Write(page);
-
-}
-
-void Write(int page){
-  pot_value = analogRead(pot);
   
   t0.setText(txt0);
   t1.setText(txt1);
@@ -86,26 +81,37 @@ void Write(int page){
   t3.setText(txt3);
   t4.setText(txt4);
   t8.setText(txt8);
-
-  Alert(page,pot_value,500,t0);
+  t9.setText(txt9);
 
   memset(txt0, 0, sizeof(txt0));
   itoa(pot_value, txt0, 10);
+  Alert(page,pot_value,500,t0);
 
-  Visor(random(1000),txt1);
+  memset(txt1, 0, sizeof(txt1));
+  itoa(random(1000), txt1, 10);
+  Alert(page,random(1000),500,t1);
 
   memset(txt2, 0, sizeof(txt2));
   itoa(random(1000), txt2, 10);
+  Alert(page,random(1000),500,t2);
 
   memset(txt3, 0, sizeof(txt3));
   itoa(random(1000), txt3, 10);
+  Alert(page,random(1000),500,t3);
 
   memset(txt4, 0, sizeof(txt4));
   itoa(random(1000), txt4, 10);
+  Alert(page,random(1000),500,t4);
 
   memset(txt8, 0, sizeof(txt8));
   itoa(random(6), txt8, 10);
+  Alert(page,random(6),7,t8);
+
+  memset(txt8, 0, sizeof(txt8));
+  itoa(random(6), txt8, 10);
+  Alert(page,random(15),16,t9);
 }
+
 
 void Alert(int page, int val, int maximo, NexText t){
   if(val>=maximo){
