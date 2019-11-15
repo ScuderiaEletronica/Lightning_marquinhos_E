@@ -24,6 +24,7 @@
 #include <NexUpload.h>
 #include <NexVariable.h>
 #include <NexWaveform.h>
+#include "MCP(ECU).h"
 
 #define button 7
 #define pot A0
@@ -51,8 +52,12 @@ int marcha=0,
     pot_value = 0,
     page=0;
 
+int variables[21];
+
 boolean botaoAnt = false,
         botaoAtu = false;
+
+
 
 void Visor(int, char);
 void Alert(int , int, int, NexText);
@@ -66,6 +71,8 @@ void setup() {
 }
 
 void loop() {
+  Variables(variables);
+  
   // put your main code here, to run repeatedly:
   botaoAtu = digitalRead(button);
   if(botaoAtu && !botaoAnt){
@@ -87,32 +94,32 @@ void loop() {
   t9.setText(txt9);
 
   memset(txt0, 0, sizeof(txt0));
-  itoa(pot_value, txt0, 10);
-  Alert(page,pot_value,500,t0);
+  itoa(variables[3], txt0, 10);
+  Alert(page,variables[3],500,t0);
 
   memset(txt1, 0, sizeof(txt1));
-  itoa(random(1000), txt1, 10);
-  Alert(page,random(1000),500,t1);
+  itoa(variables[4], txt1, 10);
+  Alert(page,variables[4],500,t1);
 
   memset(txt2, 0, sizeof(txt2));
-  itoa(random(1000), txt2, 10);
-  Alert(page,random(1000),500,t2);
+  itoa(variables[5], txt2, 10);
+  Alert(page,variables[5],500,t2);
 
   memset(txt3, 0, sizeof(txt3));
-  itoa(random(1000), txt3, 10);
-  Alert(page,random(1000),500,t3);
+  itoa(variables[1], txt3, 10);
+  Alert(page,variables[1],500,t3);
 
   memset(txt4, 0, sizeof(txt4));
-  itoa(random(1000), txt4, 10);
-  Alert(page,random(1000),500,t4);
+  itoa(variables[17], txt4, 10);
+  Alert(page,variables[17],500,t4);
 
   memset(txt8, 0, sizeof(txt8));
-  itoa(random(6), txt8, 10);
-  Alert(page,random(6),7,t8);
+  itoa(variables[15], txt8, 10);
+  Alert(page,variables[15],7,t8);
 
-  memset(txt8, 0, sizeof(txt8));
-  itoa(random(6), txt8, 10);
-  Alert(page-1,random(15),16,t9);
+  memset(txt9, 0, sizeof(txt9));
+  itoa(variables[7], txt9, 10);
+  Alert(page-1,variables[7],16,t9);
 }
 
 

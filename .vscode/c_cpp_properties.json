@@ -20,6 +20,51 @@
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "clang-x64"
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "c:/Users/ceico/Documents/Scuderia/Lightning_marquinhos_E/MCP_ECU/include",
+                "c:/Users/ceico/Documents/Scuderia/Lightning_marquinhos_E/MCP_ECU/src",
+                "C:/Users/ceico/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
+                "C:/Users/ceico/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
+                "C:/Users/ceico/.platformio/packages/framework-arduinoavr/cores/arduino",
+                "C:/Users/ceico/.platformio/packages/framework-arduinoavr/variants/mega",
+                "C:/Users/ceico/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
+                "C:/Users/ceico/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
+                "C:/Users/ceico/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
+                "C:/Users/ceico/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "c:/Users/ceico/Documents/Scuderia/Lightning_marquinhos_E/MCP_ECU/include",
+                    "c:/Users/ceico/Documents/Scuderia/Lightning_marquinhos_E/MCP_ECU/src",
+                    "C:/Users/ceico/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SoftwareSerial/src",
+                    "C:/Users/ceico/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src",
+                    "C:/Users/ceico/.platformio/packages/framework-arduinoavr/cores/arduino",
+                    "C:/Users/ceico/.platformio/packages/framework-arduinoavr/variants/mega",
+                    "C:/Users/ceico/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src",
+                    "C:/Users/ceico/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src",
+                    "C:/Users/ceico/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/Wire/src",
+                    "C:/Users/ceico/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=40100",
+                "ARDUINO_AVR_ADK",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10805",
+                "__AVR_ATmega2560__",
+                ""
+            ],
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "\"C:/Users/ceico/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe\" -mmcu=atmega2560"
         }
     ],
     "version": 4
