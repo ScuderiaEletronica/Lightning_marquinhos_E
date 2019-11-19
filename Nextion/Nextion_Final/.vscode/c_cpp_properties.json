@@ -5,6 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:/Users/ceico/Documents/Arduino/libraries/NeoNextion",
+                "C:/Users/ceico/Documents/Scuderia/Lightning_marquinhos_E/Nextion/libraries",
                 ""
             ],
             "defines": [
