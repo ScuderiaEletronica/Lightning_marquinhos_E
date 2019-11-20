@@ -29,6 +29,7 @@
 #define button 7
 #define pot A0
 
+//Texto no Nextion
 NexText t0 = NexText(0, 11, "t0");
 NexText t1 = NexText(0, 2, "t1");
 NexText t2 = NexText(0, 10, "t2");
@@ -36,6 +37,7 @@ NexText t3 = NexText(0, 3, "t3");
 NexText t4 = NexText(0, 4, "t4");
 NexText t8 = NexText(0, 8, "t8");
 NexText t9 = NexText(0, 12, "t9");
+// Páginas do Nextion
 NexPage page0 = NexPage(0, 0, "page0");
 NexPage page1 = NexPage(1, 0, "page1");
 NexPage page2 = NexPage(2, 0, "page2");
@@ -57,9 +59,6 @@ int variables[21];
 boolean botaoAnt = false,
         botaoAtu = false;
 
-
-
-void Visor(int, char);
 void Alert(int , int, int, NexText);
 
 void setup() {
@@ -72,8 +71,8 @@ void setup() {
 
 void loop() {
   Variables(variables);
-  
-  // put your main code here, to run repeatedly:
+
+  // Botão para mudar de página
   botaoAtu = digitalRead(button);
   if(botaoAtu && !botaoAnt){
     if(page % 2 == 0)
@@ -84,7 +83,8 @@ void loop() {
   }
   
   botaoAnt=botaoAtu;
-  
+
+  //Mudanças no Texto
   t0.setText(txt0);
   t1.setText(txt1);
   t2.setText(txt2);
@@ -122,7 +122,7 @@ void loop() {
   Alert(page-1,variables[7],16,t9);
 }
 
-
+//Alerta
 void Alert(int page, int val, int maximo, NexText t){
   if(val>=maximo){
     page2.show();
@@ -134,9 +134,4 @@ void Alert(int page, int val, int maximo, NexText t){
     else
       page0.show();
   }
-}
-
-void Visor(int val, char text[]){
-  memset(text, 0, sizeof(text));
-  itoa(val, text, 10);
 }
