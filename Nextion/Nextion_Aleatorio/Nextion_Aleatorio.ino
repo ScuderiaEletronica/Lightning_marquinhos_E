@@ -59,10 +59,10 @@ void Alert(int , int, int, NexText);
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial1.begin(9600);
   nexInit();
   page0.show();
-  pinMode(button, INPUT);
+  pinMode(button, INPUT_PULLUP);
 }
 
 void loop() {

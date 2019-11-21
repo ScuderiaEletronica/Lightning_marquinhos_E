@@ -1,3 +1,4 @@
+#include <mcp_can.h>
 #include <doxygen.h>
 #include <NexButton.h>
 #include <NexCheckbox.h>
@@ -24,10 +25,11 @@
 #include <NexUpload.h>
 #include <NexVariable.h>
 #include <NexWaveform.h>
+
 #include "MCP(ECU).h"
 
 #define button 7
-#define pot A0
+#define PIN_CAN_INT 2                 // interrupt
 
 //Texto no Nextion
 NexText t0 = NexText(0, 11, "t0");
@@ -52,34 +54,47 @@ char  txt0[10],
 
 int marcha=0,
     pot_value = 0,
-    page=0;
+    page=0,
+    alert=0;
 
 int variables[21];
 
 boolean botaoAnt = false,
         botaoAtu = false;
 
-void Alert(int , int, int, NexText);
+//void Alert(int , int, int, NexText);
 
 void setup() {
   // put your setup code here, to run once:
+  CAN0.begin(CAN_500KBPS);
   Serial.begin(9600);
+  Serial1.begin(9600);
   nexInit();
   page0.show();
-  pinMode(button, INPUT);
+  
+  pinMode(A13, OUTPUT);
+  digitalWrite(A13, 1);
+
+  pinMode(A14, OUTPUT);
+  digitalWrite(A14, 0);
+  
+  pinMode(button, INPUT_PULLUP);
 }
 
 void loop() {
-  Variables(variables);
+  if (!digitalRead(PIN_CAN_INT)){
+    Variables(variables);
+  }
+  Serial.print(variables[4]);
 
   // Botão para mudar de página
-  botaoAtu = digitalRead(button);
+  botaoAtu = !digitalRead(button);
   if(botaoAtu && !botaoAnt){
     if(page % 2 == 0)
       page1.show();
     else
       page0.show();
-  page++;
+    page++;
   }
   
   botaoAnt=botaoAtu;
@@ -119,7 +134,7 @@ void loop() {
 
   memset(txt9, 0, sizeof(txt9));
   itoa(variables[7], txt9, 10);
-  Alert(page-1,variables[7],16,t9);
+  Alert(page,variables[7],16,t9);
 }
 
 //Alerta
@@ -127,11 +142,15 @@ void Alert(int page, int val, int maximo, NexText t){
   if(val>=maximo){
     page2.show();
     t.Set_font_color_pco(2047);
+    alert=1;
   }
   else{
-    if(page % 2 == 0)
-      page1.show();
-    else
-      page0.show();
+    if(alert == 1){
+      if(page % 2 == 0)
+        page1.show();
+      else
+        page0.show();
+      alert=0;
+    }
   }
 }

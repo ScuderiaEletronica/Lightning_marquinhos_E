@@ -3,8 +3,7 @@
 #include <SPI.h>
 #include <SoftwareSerial.h>
 
-#define PIN_CAN_CS 9                  // chip select
-#define PIN_CAN_INT 2                 // interrupt
+#define PIN_CAN_CS A15
 //#define DEBUG_CAN_ID 1521           // If defined, dump frames sent to this CAN id
 
 
