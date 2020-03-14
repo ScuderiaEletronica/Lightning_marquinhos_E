@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Monitoramento do Carro</title>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>Monitoramento do Carro</h1>
+    </header>
+    <main>
+        <div class="medidores Principal">
+            <div class="velocimetro velocidade">Vehicle Speed: <br><span></span> m/s</div>
+            <div class="velocimetro rpm">RPM: <br><span></span> RPM</div>
+            <div class="termometro mat">Manifold air temperature: <br><span></span> ºC</div>
+            <div class="pressao map">Manifold air pressure: <br><span></span> KPa</div>
+            <div class="termometro clt">Coolant temperature: <br><span></span> ºC</div>
+            <div class="gear cgs">Current gear selected: <br><span></span></div>
+        </div>
+        <div class="medidores Oleo hide">
+            <div class="velocimetro velocidade">Vehicle Speed: 30.5 m/s</div>
+            <div class="velocimetro rpm">200 RPM</div>
+            <div class="termometro mat">25.5 ºC</div>
+            <div class="pressao map">10 KPa</div>
+            <div class="termometro clt">Coolant temperature: 20 ºC</div>
+            <div class="gear">Current gear selected: N</div>
+        </div>
+        <div class="medidores Combustivel hide">
+            <div class="velocimetro velocidade">Vehicle Speed: 30.5 m/s</div>
+            <div class="velocimetro rpm">200 RPM</div>
+            <div class="termometro mat">25.5 ºC</div>
+            <div class="pressao map">10 KPa</div>
+            <div class="termometro clt">Coolant temperature: 20 ºC</div>
+            <div class="gear">Current gear selected: N</div>
+        </div>
+        <div class="medidores Energia hide">
+            <div class="bateria voltagem">Battery voltage: <span></span> V</div>
+            <div class="velocimetro o2">Voltage from O2: <span></span> V</div>
+        </div>
+    </main>
+    <aside>
+        <div class="ECU">Seconds ECU has been on: <span>10</span> s</div>
+        <h3>MENU</h3>
+        <ul class="sem-marcador">
+            <li><button class="principal pressionado">Principal</button></li>
+            <li><button class="oleo">Óleo</button></li>
+            <li><button class="combustivel">Combustivel</button></li>
+            <li><button class="energia">Energia</button></li>
+        </ul>
+    </aside>
+    <footer>
+        <p>@ScuderiaUFABC <img class="logo" src="Scuderia.jpg" alt="logo ScuderiaUFABC"></p>
+    </footer>
+    </div>
+    <script src="debug.js"></script>
+    <script src="eventListener.js"></script>
+</body>
+</html>
