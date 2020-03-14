@@ -77,11 +77,12 @@ aside{
     height: 100%;
 }
 aside ul li button{
-    background-color: greenyellow;
+    background-color: #00ff00;;
     font-size: 40px;
     text-align: left;
     margin: 1px;
-    border: green;
+    border: solid green;
+    border-radius: 10px;
 }
 aside ul li button:hover{
     color: blue;
@@ -89,6 +90,7 @@ aside ul li button:hover{
 
 .pressionado{
     background-color: green;
+    border: solid #00ff00;
 }
 
 .ECU{
@@ -105,8 +107,11 @@ ul.sem-marcador, ol.sem-marcador{
 }
 footer{
     grid-area: f;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     color: white;
-    text-align: center;
+    text-align: right;
     margin-top: auto;
     padding: 16px;
 }
@@ -117,7 +122,9 @@ footer{
     grid-template-areas: "h h" "m a" "f f";
 }
 img.logo{
-    max-height: 40px;
+    height: 40px;
+    width: 45px;
+    margin: 10px;
 }
 .hide{
     opacity: 0;
