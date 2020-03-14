@@ -110,3 +110,19 @@ document
             .querySelector('.energia')
             .classList.add('pressionado')
     })
+
+document
+    .querySelector('button.darkmode')
+    .addEventListener("click", function() {
+        document.querySelector('body.darkmode').classList.add('whitemode')
+        document.querySelector('body.whitemode').classList.remove('darkmode')
+        document.querySelector('main.darkmode').classList.add('whitemode')
+        document.querySelector('main.whitemode').classList.remove('darkmode')
+        document.querySelector('aside.darkmode').classList.add('whitemode')
+        document.querySelector('aside.whitemode').classList.remove('darkmode')
+        document.querySelector('.mode.darkmode').classList.add('whitemode')
+        document.querySelector('.mode.whitemode').classList.remove('darkmode')
+        document.querySelector('footer.darkmode').classList.add('whitemode')
+        document.querySelector('footer.whitemode').classList.remove('darkmode')
+        document.querySelector('.mode').innerHTML = 'Dark Mode'
+    })
