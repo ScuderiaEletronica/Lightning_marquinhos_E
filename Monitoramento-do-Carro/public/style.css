@@ -93,6 +93,13 @@ aside ul li button:hover{
     border: solid #00ff00;
 }
 
+aside img{
+    height: 20px;
+    margin-left: 150px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
 .ECU{
     color: green;
     text-align: center;
@@ -101,6 +108,7 @@ h3{
     color: green;
     text-align: center;
     font-size: 50px;
+    margin: 10px;
 }
 ul.sem-marcador, ol.sem-marcador{
     list-style: none;
