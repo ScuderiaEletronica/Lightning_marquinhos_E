@@ -94,3 +94,27 @@ const meters_database = {};
     meters_database.update = update_meter
     meters_database.listen_meter = listen_meter
 })()
+
+var velocidade = { 
+    name: 'Vehicle speed', 
+    value: 100,
+    tag: ".velocidade",
+    aprox: 2,
+    min: 0,
+    max: 120
+}
+
+meters_database.new(velocidade)
+
+function renderScreen() {
+
+    for (const meterId in meters_database) {
+        const meter = meters_database[meterId]
+        document.querySelector(meter.tag + 'span').innerHTML = meter.value
+        console.log(meter.tag + " " + meter.value)
+    }
+
+    setTimeout(() => {
+        requestAnimationFrame(() => renderScreen(value))
+    }, 500);
+}
