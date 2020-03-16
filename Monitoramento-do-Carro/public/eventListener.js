@@ -111,18 +111,17 @@ document
             .classList.add('pressionado')
     })
 
-document
-    .querySelector('button.darkmode')
+
+document.querySelector('.mode')
     .addEventListener("click", function() {
-        document.querySelector('body.darkmode').classList.add('whitemode')
-        document.querySelector('body.whitemode').classList.remove('darkmode')
-        document.querySelector('main.darkmode').classList.add('whitemode')
-        document.querySelector('main.whitemode').classList.remove('darkmode')
-        document.querySelector('aside.darkmode').classList.add('whitemode')
-        document.querySelector('aside.whitemode').classList.remove('darkmode')
-        document.querySelector('.mode.darkmode').classList.add('whitemode')
-        document.querySelector('.mode.whitemode').classList.remove('darkmode')
-        document.querySelector('footer.darkmode').classList.add('whitemode')
-        document.querySelector('footer.whitemode').classList.remove('darkmode')
-        document.querySelector('.mode').innerHTML = 'Dark Mode'
+        document.querySelector('body').classList.toggle('whitemode')
+        document.querySelector('main').classList.toggle('whitemode')
+        document.querySelector('aside').classList.toggle('whitemode')
+        document.querySelector('.mode').classList.toggle('whitemode')
+        document.querySelector('footer').classList.toggle('whitemode')
+        if (document.querySelector('.mode').classList.contains('whitemode')) {
+            document.querySelector('.mode').innerHTML = 'Dark Mode'
+        } else {
+            document.querySelector('.mode').innerHTML = 'White Mode'
+        }
     })

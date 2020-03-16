@@ -3,7 +3,7 @@ html, body{
     padding: 0;
     box-sizing: border-box;
 }
-body.darkmode{
+body{
     background-color: black;
 }
 body.whitemode{
@@ -20,8 +20,7 @@ h1{
 }
 main{
     grid-area: m;
-}
-main.darkmode{
+    height: 100%;
     border: 1px solid white;
 }
 main.whitemode{
@@ -84,8 +83,6 @@ main.whitemode{
 aside{
     grid-area: a;
     height: 100%;
-}
-aside.darkmode{
     border: 1px solid white;
 }
 aside.whitemode{
@@ -104,8 +101,6 @@ aside ul li button:hover{
 }
 button.mode{
     font-weight: bold;
-}
-button.darkmode{
     background-color: white;
     color: black;
 }
@@ -146,8 +141,6 @@ footer{
     text-align: right;
     margin-top: auto;
     padding: 16px;
-}
-footer.darkmode{
     color: white;
 }
 footer.whitemode{
