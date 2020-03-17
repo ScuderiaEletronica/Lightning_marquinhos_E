@@ -48,7 +48,7 @@ This includes the following:
 You should have to install some packages from pip3, to do that press **Ctrl+Alt+T** and type the following
 
 ```
-colocar steps para rodar telemetria e monitoramento no carro,e software de tuning
+colocar steps para rodar telemetria, monitoramento no carro e software de tuning
 
 ```
 
@@ -58,7 +58,7 @@ To run the code you must be in the following directory then you start the progra
 
 ```
 
-sudo systemctl start (programa para rodar a telemetria
+sudo systemctl start (programa para rodar a telemetria)
 
 ```
 ## In case of hardware/software update
