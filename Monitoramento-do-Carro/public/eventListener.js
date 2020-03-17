@@ -114,12 +114,12 @@ document
 
 document.querySelector('.mode')
     .addEventListener("click", function() {
-        document.querySelector('body').classList.toggle('whitemode')
-        document.querySelector('main').classList.toggle('whitemode')
-        document.querySelector('aside').classList.toggle('whitemode')
-        document.querySelector('.mode').classList.toggle('whitemode')
-        document.querySelector('footer').classList.toggle('whitemode')
-        if (document.querySelector('.mode').classList.contains('whitemode')) {
+        document.querySelector('body').classList.toggle('lightmode')
+        document.querySelector('main').classList.toggle('lightmode')
+        document.querySelector('aside').classList.toggle('lightmode')
+        document.querySelector('.mode').classList.toggle('lightmode')
+        document.querySelector('footer').classList.toggle('lightmode')
+        if (document.querySelector('.mode').classList.contains('lightmode')) {
             document.querySelector('.mode').innerHTML = 'Dark Mode'
         } else {
             document.querySelector('.mode').innerHTML = 'White Mode'

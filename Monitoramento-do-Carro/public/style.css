@@ -6,7 +6,7 @@ html, body{
 body{
     background-color: black;
 }
-body.whitemode{
+body.lightmode{
     background-color: white;
 }
 header{
@@ -23,7 +23,7 @@ main{
     height: 100%;
     border: 1px solid white;
 }
-main.whitemode{
+main.lightmode{
     border: 1px solid black;
 }
 .medidores{
@@ -85,7 +85,7 @@ aside{
     height: 100%;
     border: 1px solid white;
 }
-aside.whitemode{
+aside.lightmode{
     border: 1px solid black;
 }
 aside ul li button{
@@ -104,7 +104,7 @@ button.mode{
     background-color: white;
     color: black;
 }
-button.whitemode{
+button.lightmode{
     background-color: black;
     color: white;
 }
@@ -143,7 +143,7 @@ footer{
     padding: 16px;
     color: white;
 }
-footer.whitemode{
+footer.lightmode{
     color: black;
 }
 .container{
