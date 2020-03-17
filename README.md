@@ -67,4 +67,4 @@ If is necessary to change the actuators pins, and other variables you will need 
 
 
 ## Support and Feedback
-Sanic enterprises
+Sanic 
