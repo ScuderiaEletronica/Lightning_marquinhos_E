@@ -13,7 +13,7 @@ This includes the following:
 
 
 
-## Overall diagram from Raspberry Pi 3B 
+## Overall diagram from ESP 32 #TODO 
 
 |**+3.3V**               	| 1  	| 2  	|**+5V**                  	|
 |---------------------	|----	|----	|-----------------------	|
@@ -41,7 +41,7 @@ This includes the following:
 
 ## Pinout from ESP32
 
-![raspberry_pi_circuit_note_fig2](/uploads/c489f8224a574366f613fdad699fc8c6/raspberry_pi_circuit_note_fig2.png)
+![esp32](https://user-images.githubusercontent.com/56930695/76874143-83ba0c00-684d-11ea-9d0a-b79af64e23a2.png)
 
 ## Prerequisites 
 
@@ -67,3 +67,4 @@ If is necessary to change the actuators pins, and other variables you will need 
 
 
 ## Support and Feedback
+Sanic enterprises
