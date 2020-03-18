@@ -3,7 +3,7 @@ O objetivo deste repositório é criar um software que irá monitorar o carro em
 
 ## Dados recebidos:
 
-|Nome | Unidade|
+|**Nome** | **Unidade**|
 |-----|------|
 |Seconds ECU has been on | s|
 |Engine RPM | RPM|
