@@ -1,0 +1,74 @@
+{
+    "meters":{
+        "velocidade": { 
+            "name": "Vehicle speed", 
+            "value": 100,
+            "tag": "velocidade",
+            "aprox": 2,
+            "min": 0,
+            "max": 120
+        },
+        "rpm": { 
+            "name": "Vehicle speed", 
+            "value": 100,
+            "tag": "rpm",
+            "aprox": 2,
+            "min": 0,
+            "max": 120
+        },
+        "map": { 
+            "name": "Vehicle speed", 
+            "value": 100,
+            "tag": "map",
+            "aprox": 2,
+            "min": 0,
+            "max": 120
+        },
+        "mat": { 
+            "name": "Vehicle speed", 
+            "value": 100,
+            "tag": "mat",
+            "aprox": 2,
+            "min": 0,
+            "max": 120
+        },
+        "clt": { 
+            "name": "Vehicle speed", 
+            "value": 100,
+            "tag": "clt",
+            "aprox": 2,
+            "min": 0,
+            "max": 120
+        },
+        "cgs": { 
+            "name": "Vehicle speed", 
+            "value": 100,
+            "tag": "cgs",
+            "aprox": 2,
+            "min": 0,
+            "max": 120
+        },
+        "voltagem": { 
+            "name": "Battery voltage", 
+            "value": 100,
+            "tag": "voltagem",
+            "aprox": 2,
+            "min": 0,
+            "max": 120
+        },
+        "o2": { 
+            "name": "Voltage from O2", 
+            "value": 100,
+            "tag": "o2",
+            "aprox": 2,
+            "min": 0,
+            "max": 120
+        },
+        "ECU": { 
+            "name": "Seconds ECU has been on", 
+            "value": 100,
+            "tag": "ECU",
+            "aprox": 2
+        }
+    }
+}

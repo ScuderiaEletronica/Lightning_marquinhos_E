@@ -58,7 +58,7 @@ main.lightmode{
 }
 .termometro{
     font-size: 40px;
-    background-color: red;
+    background-color: cyan;
     padding: 10px;
     margin: 10px;
 }
@@ -79,6 +79,9 @@ main.lightmode{
     background-color: purple;
     padding: 10px;
     margin: 10px;
+}
+.extremos{
+    color: red;
 }
 aside{
     grid-area: a;

@@ -89,32 +89,36 @@ const meters_database = {};
             })
     }
 
+    function ID() {
+        var ID= firebase.database().ref().child('meters')
+        return ID
+    }
+
     meters_database.new = new_meter
     meters_database.remove = remove_meter
     meters_database.update = update_meter
     meters_database.listen_meter = listen_meter
+    meters_database.ID = ID
 })()
 
-var velocidade = { 
-    name: 'Vehicle speed', 
-    value: 100,
-    tag: ".velocidade",
-    aprox: 2,
-    min: 0,
-    max: 120
-}
+renderScreen(firebase.database().ref().child('meters'))
 
-meters_database.new(velocidade)
+function renderScreen(ref) {
 
-function renderScreen() {
 
-    for (const meterId in meters_database) {
-        const meter = meters_database[meterId]
-        document.querySelector(meter.tag + 'span').innerHTML = meter.value
-        console.log(meter.tag + " " + meter.value)
-    }
+    ref.on('value', function (snap) {
+        console.log(snap.val())
 
-    setTimeout(() => {
-        requestAnimationFrame(() => renderScreen(value))
-    }, 500);
+        for (const key in snap.val()) {
+            const meter = snap.val()[key];
+            const meterid = document.querySelector('.' + meter.tag + ' span')
+            meterid.innerHTML = meter.value
+            if(meter.value >= meter.max || meter.value <= meter.min){
+                meterid.classList.add("extremos")
+            }
+            else{
+                meterid.classList.remove("extremos")
+            }
+        }
+    })
 }
